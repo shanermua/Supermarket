@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Supermarket
 {
@@ -15,6 +16,7 @@ namespace Supermarket
         public Supermarket()
         {
             InitializeComponent();
+            SqlConnection connection = new SqlConnection();
         }
 
         private void Supermarket_Load(object sender, EventArgs e)

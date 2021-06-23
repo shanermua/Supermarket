@@ -11,10 +11,7 @@ using System.Data.SqlClient;
 
 namespace Supermarket
 {
-    public class SQL
-    {
-        public static SqlConnection Connection { get; set; }
-    }
+   
     public partial class Supermarket : Form
     {
         public Supermarket()
@@ -28,5 +25,9 @@ namespace Supermarket
         {
             
         }
+    }
+    public class SQL
+    {
+        public static SqlConnection Connection { get; set; }
     }
 }

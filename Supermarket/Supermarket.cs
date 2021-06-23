@@ -10,12 +10,16 @@ using System.Windows.Forms;
 
 namespace Supermarket
 {
-    public partial class Form1 : Form
+    public partial class Supermarket : Form
     {
-        public Form1()
+        public Supermarket()
         {
             InitializeComponent();
         }
 
+        private void Supermarket_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("hello");
+        }
     }
 }

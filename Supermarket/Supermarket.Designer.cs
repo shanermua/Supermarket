@@ -44,7 +44,7 @@ namespace Supermarket
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button8 = new System.Windows.Forms.Button();
+            this.Logout = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -196,7 +196,7 @@ namespace Supermarket
             this.groupBox5.Controls.Add(this.label1);
             this.groupBox5.Controls.Add(this.PassWord);
             this.groupBox5.Controls.Add(this.ID);
-            this.groupBox5.Controls.Add(this.button8);
+            this.groupBox5.Controls.Add(this.Logout);
             this.groupBox5.Controls.Add(this.Login);
             this.groupBox5.Location = new System.Drawing.Point(774, 41);
             this.groupBox5.Name = "groupBox5";
@@ -205,14 +205,15 @@ namespace Supermarket
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "账号";
             // 
-            // button8
+            // Logout
             // 
-            this.button8.Location = new System.Drawing.Point(237, 142);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(96, 29);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "注销";
-            this.button8.UseVisualStyleBackColor = true;
+            this.Logout.Enabled = false;
+            this.Logout.Location = new System.Drawing.Point(237, 142);
+            this.Logout.Name = "Logout";
+            this.Logout.Size = new System.Drawing.Size(96, 29);
+            this.Logout.TabIndex = 1;
+            this.Logout.Text = "注销";
+            this.Logout.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
@@ -304,7 +305,7 @@ namespace Supermarket
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button Logout;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;

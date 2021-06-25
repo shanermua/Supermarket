@@ -69,6 +69,11 @@ namespace Supermarket
                 if (PassWord.Text == dataSet.Tables[0].Rows[0].ItemArray[0].ToString())
                 {
                     MessageBox.Show("登录成功！");
+                    ID.Enabled = false;
+                    PassWord.Text = "";
+                    PassWord.Enabled = false;
+                    Login.Enabled = false;
+                    Logout.Enabled = true;
                 }
                 else
                 {
@@ -79,13 +84,10 @@ namespace Supermarket
             {
                 MessageBox.Show("工号错误！");
             }
-            
-           
         }
     }
     public class SQL
     {
         public static SqlConnection Connection { get; set; }
-        //public static string statement { get; set; }
     }
 }

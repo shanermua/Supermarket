@@ -31,11 +31,26 @@ namespace Supermarket
             dataAdapter.Fill(dataSet, "huojia");
             货架状态.DataSource = dataSet;
             货架状态.DataMember = "huojia";
+            command.CommandText = "select * from kucun";
+            dataAdapter.Fill(dataSet, "kucun");
+            仓库状态.DataSource = dataSet;
+            仓库状态.DataMember = "kucun";
         }
 
         private void Supermarket_Load(object sender, EventArgs e)
         {
+            Status_Reload();
+        }
 
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            Status_Reload();
+        }
+
+        private void Supermarket_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SQL.Connection.Close();
+            SQL.Connection.Dispose();
         }
     }
     public class SQL

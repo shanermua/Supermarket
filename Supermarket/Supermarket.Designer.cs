@@ -31,7 +31,7 @@ namespace Supermarket
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.仓库状态 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.货架状态 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
@@ -43,7 +43,7 @@ namespace Supermarket
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.仓库状态)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.货架状态)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +61,7 @@ namespace Supermarket
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dataGridView2);
+            this.groupBox3.Controls.Add(this.仓库状态);
             this.groupBox3.Location = new System.Drawing.Point(6, 236);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(384, 207);
@@ -69,16 +69,16 @@ namespace Supermarket
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "仓库";
             // 
-            // dataGridView2
+            // 仓库状态
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 26);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 29;
-            this.dataGridView2.Size = new System.Drawing.Size(378, 172);
-            this.dataGridView2.TabIndex = 0;
+            this.仓库状态.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.仓库状态.Location = new System.Drawing.Point(6, 26);
+            this.仓库状态.Name = "仓库状态";
+            this.仓库状态.RowHeadersVisible = false;
+            this.仓库状态.RowHeadersWidth = 51;
+            this.仓库状态.RowTemplate.Height = 29;
+            this.仓库状态.Size = new System.Drawing.Size(378, 172);
+            this.仓库状态.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -145,6 +145,7 @@ namespace Supermarket
             this.button5.TabIndex = 1;
             this.button5.Text = "刷新";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.Refresh_Click);
             // 
             // button6
             // 
@@ -179,10 +180,11 @@ namespace Supermarket
             this.Controls.Add(this.groupBox1);
             this.Name = "Supermarket";
             this.Text = "超市管理系统";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Supermarket_FormClosing);
             this.Load += new System.EventHandler(this.Supermarket_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.仓库状态)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.货架状态)).EndInit();
             this.ResumeLayout(false);
@@ -200,7 +202,7 @@ namespace Supermarket
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView 仓库状态;
         private System.Windows.Forms.DataGridView 货架状态;
         private System.Windows.Forms.Button button7;
     }

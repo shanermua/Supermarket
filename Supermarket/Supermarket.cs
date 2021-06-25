@@ -85,6 +85,15 @@ namespace Supermarket
                 MessageBox.Show("工号错误！");
             }
         }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            ID.Enabled = true;
+            PassWord.Enabled = true;
+            Login.Enabled = true;
+            Logout.Enabled = false;
+            MessageBox.Show("注销成功！");
+        }
     }
     public class SQL
     {

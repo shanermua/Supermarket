@@ -32,6 +32,8 @@ namespace Supermarket
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.仓库状态 = new System.Windows.Forms.DataGridView();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.销售列表 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.货架状态 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,17 +46,27 @@ namespace Supermarket
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.仓库状态)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.销售列表)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.货架状态)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button7);
+            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.groupBox4);
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.button6);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(402, 453);
+            this.groupBox1.Size = new System.Drawing.Size(799, 453);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "状态";
@@ -80,6 +92,27 @@ namespace Supermarket
             this.仓库状态.Size = new System.Drawing.Size(378, 172);
             this.仓库状态.TabIndex = 0;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.销售列表);
+            this.groupBox4.Location = new System.Drawing.Point(402, 26);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(390, 204);
+            this.groupBox4.TabIndex = 0;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "销售";
+            // 
+            // 销售列表
+            // 
+            this.销售列表.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.销售列表.Location = new System.Drawing.Point(6, 26);
+            this.销售列表.Name = "销售列表";
+            this.销售列表.RowHeadersVisible = false;
+            this.销售列表.RowHeadersWidth = 51;
+            this.销售列表.RowTemplate.Height = 29;
+            this.销售列表.Size = new System.Drawing.Size(378, 172);
+            this.销售列表.TabIndex = 0;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.货架状态);
@@ -103,7 +136,7 @@ namespace Supermarket
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(437, 12);
+            this.button1.Location = new System.Drawing.Point(499, 323);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 1;
@@ -112,7 +145,7 @@ namespace Supermarket
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(537, 12);
+            this.button2.Location = new System.Drawing.Point(441, 397);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 29);
             this.button2.TabIndex = 1;
@@ -121,7 +154,7 @@ namespace Supermarket
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(637, 12);
+            this.button3.Location = new System.Drawing.Point(541, 397);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 29);
             this.button3.TabIndex = 1;
@@ -130,7 +163,7 @@ namespace Supermarket
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(737, 12);
+            this.button4.Location = new System.Drawing.Point(641, 397);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(94, 29);
             this.button4.TabIndex = 1;
@@ -139,7 +172,7 @@ namespace Supermarket
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(437, 436);
+            this.button5.Location = new System.Drawing.Point(499, 257);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(94, 29);
             this.button5.TabIndex = 1;
@@ -149,7 +182,7 @@ namespace Supermarket
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(537, 436);
+            this.button6.Location = new System.Drawing.Point(599, 257);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(94, 29);
             this.button6.TabIndex = 1;
@@ -158,7 +191,7 @@ namespace Supermarket
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(837, 12);
+            this.button7.Location = new System.Drawing.Point(599, 323);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(94, 29);
             this.button7.TabIndex = 1;
@@ -169,14 +202,7 @@ namespace Supermarket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1109, 471);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(831, 481);
             this.Controls.Add(this.groupBox1);
             this.Name = "Supermarket";
             this.Text = "超市管理系统";
@@ -185,6 +211,8 @@ namespace Supermarket
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.仓库状态)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.销售列表)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.货架状态)).EndInit();
             this.ResumeLayout(false);
@@ -205,6 +233,8 @@ namespace Supermarket
         private System.Windows.Forms.DataGridView 仓库状态;
         private System.Windows.Forms.DataGridView 货架状态;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.DataGridView 销售列表;
     }
 }
 

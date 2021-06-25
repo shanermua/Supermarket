@@ -24,8 +24,8 @@ namespace Supermarket
 
         public void Status_Reload()
         {
-            SQL.statement = "select * from huojia";
-            SqlCommand command = new(SQL.statement, SQL.Connection);
+            string statement = "select * from huojia";
+            SqlCommand command = new(statement, SQL.Connection);
             SqlDataAdapter dataAdapter = new(command);
             DataSet dataSet = new();
             dataAdapter.Fill(dataSet, "huojia");
@@ -35,6 +35,10 @@ namespace Supermarket
             dataAdapter.Fill(dataSet, "kucun");
             仓库状态.DataSource = dataSet;
             仓库状态.DataMember = "kucun";
+            command.CommandText = "select * from xiaoshou";
+            dataAdapter.Fill(dataSet, "xiaoshou");
+            销售列表.DataSource = dataSet;
+            销售列表.DataMember = "xiaoshou";
         }
 
         private void Supermarket_Load(object sender, EventArgs e)
@@ -56,6 +60,6 @@ namespace Supermarket
     public class SQL
     {
         public static SqlConnection Connection { get; set; }
-        public static string statement { get; set; }
+        //public static string statement { get; set; }
     }
 }

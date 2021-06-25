@@ -36,11 +36,11 @@ namespace Supermarket
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.Login = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ID = new System.Windows.Forms.TextBox();
+            this.PassWord = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -128,14 +128,15 @@ namespace Supermarket
             this.button2.Text = "货架管理";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // Login
             // 
-            this.button6.Location = new System.Drawing.Point(124, 142);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(96, 29);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "登录";
-            this.button6.UseVisualStyleBackColor = true;
+            this.Login.Location = new System.Drawing.Point(124, 142);
+            this.Login.Name = "Login";
+            this.Login.Size = new System.Drawing.Size(96, 29);
+            this.Login.TabIndex = 1;
+            this.Login.Text = "登录";
+            this.Login.UseVisualStyleBackColor = true;
+            this.Login.Click += new System.EventHandler(this.Login_Click);
             // 
             // button1
             // 
@@ -156,20 +157,20 @@ namespace Supermarket
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.Refresh_Click);
             // 
-            // textBox1
+            // ID
             // 
-            this.textBox1.Location = new System.Drawing.Point(124, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 27);
-            this.textBox1.TabIndex = 2;
+            this.ID.Location = new System.Drawing.Point(124, 33);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(209, 27);
+            this.ID.TabIndex = 2;
             // 
-            // textBox2
+            // PassWord
             // 
-            this.textBox2.Location = new System.Drawing.Point(124, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(209, 27);
-            this.textBox2.TabIndex = 2;
+            this.PassWord.Location = new System.Drawing.Point(124, 85);
+            this.PassWord.Name = "PassWord";
+            this.PassWord.PasswordChar = '*';
+            this.PassWord.Size = new System.Drawing.Size(209, 27);
+            this.PassWord.TabIndex = 2;
             // 
             // label1
             // 
@@ -193,10 +194,10 @@ namespace Supermarket
             // 
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.label1);
-            this.groupBox5.Controls.Add(this.textBox2);
-            this.groupBox5.Controls.Add(this.textBox1);
+            this.groupBox5.Controls.Add(this.PassWord);
+            this.groupBox5.Controls.Add(this.ID);
             this.groupBox5.Controls.Add(this.button8);
-            this.groupBox5.Controls.Add(this.button6);
+            this.groupBox5.Controls.Add(this.Login);
             this.groupBox5.Location = new System.Drawing.Point(774, 41);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(374, 200);
@@ -293,13 +294,13 @@ namespace Supermarket
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button Login;
         private System.Windows.Forms.DataGridView 仓库状态;
         private System.Windows.Forms.DataGridView 货架状态;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridView 销售列表;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox ID;
+        private System.Windows.Forms.TextBox PassWord;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox5;

@@ -29,7 +29,7 @@ namespace Supermarket
         /// </summary>
         private void InitializeComponent()
         {
-            this.人事列表 = new System.Windows.Forms.DataGridView();
+            this.Personnel_List = new System.Windows.Forms.DataGridView();
             this.button_Entry = new System.Windows.Forms.Button();
             this.button_Quit = new System.Windows.Forms.Button();
             this.button_Update = new System.Windows.Forms.Button();
@@ -48,21 +48,21 @@ namespace Supermarket
             this.textBox_confirmPassword = new System.Windows.Forms.TextBox();
             this.label_sex = new System.Windows.Forms.Label();
             this.comboBox_sex = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.人事列表)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Personnel_List)).BeginInit();
             this.SuspendLayout();
             // 
-            // 人事列表
+            // Personnel_List
             // 
-            this.人事列表.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.人事列表.Location = new System.Drawing.Point(20, 42);
-            this.人事列表.Name = "人事列表";
-            this.人事列表.RowHeadersVisible = false;
-            this.人事列表.RowHeadersWidth = 51;
-            this.人事列表.RowTemplate.Height = 29;
-            this.人事列表.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.人事列表.Size = new System.Drawing.Size(602, 698);
-            this.人事列表.TabIndex = 1;
-            this.人事列表.SelectionChanged += new System.EventHandler(this.人事列表_SelectionChanged);
+            this.Personnel_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Personnel_List.Location = new System.Drawing.Point(20, 42);
+            this.Personnel_List.Name = "Personnel_List";
+            this.Personnel_List.RowHeadersVisible = false;
+            this.Personnel_List.RowHeadersWidth = 51;
+            this.Personnel_List.RowTemplate.Height = 29;
+            this.Personnel_List.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Personnel_List.Size = new System.Drawing.Size(602, 698);
+            this.Personnel_List.TabIndex = 1;
+            this.Personnel_List.SelectionChanged += new System.EventHandler(this.Personnel_List_SelectionChanged);
             // 
             // button_Entry
             // 
@@ -263,12 +263,12 @@ namespace Supermarket
             this.Controls.Add(this.button_Update);
             this.Controls.Add(this.button_Quit);
             this.Controls.Add(this.button_Entry);
-            this.Controls.Add(this.人事列表);
+            this.Controls.Add(this.Personnel_List);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Personnel";
             this.Text = "人事管理";
             this.Load += new System.EventHandler(this.Personnel_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.人事列表)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Personnel_List)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,7 +276,7 @@ namespace Supermarket
 
         #endregion
 
-        private System.Windows.Forms.DataGridView 人事列表;
+        private System.Windows.Forms.DataGridView Personnel_List;
         private System.Windows.Forms.Button button_Entry;
         private System.Windows.Forms.Button button_Quit;
         private System.Windows.Forms.Button button_Update;

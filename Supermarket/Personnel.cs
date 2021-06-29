@@ -25,8 +25,8 @@ namespace Supermarket
             SqlDataAdapter dataAdapter = new(command);
             DataSet dataSet = new();
             dataAdapter.Fill(dataSet, "yuangong");
-            人事列表.DataSource = dataSet;
-            人事列表.DataMember = "yuangong";
+            Personnel_List.DataSource = dataSet;
+            Personnel_List.DataMember = "yuangong";
             //for (int i = 0; i < dataSet.Tables["yuangong"].Rows.Count; i++)
             //{
             //    人事列表.Rows[i].Cells[8].ValueType = statement.GetType();
@@ -54,12 +54,12 @@ namespace Supermarket
         {
             try
             {
-                textBox_name.Text = 人事列表.SelectedRows[0].Cells["姓名"].Value.ToString();
-                comboBox_sex.SelectedItem = 人事列表.SelectedRows[0].Cells["性别"].Value.ToString();
-                textBox_position.Text = 人事列表.SelectedRows[0].Cells["职位"].Value.ToString();
-                textBox_contact.Text = 人事列表.SelectedRows[0].Cells["联系方式"].Value.ToString();
-                textBox_wages.Text = 人事列表.SelectedRows[0].Cells["工资"].Value.ToString();
-                textBox_password.Text = 人事列表.SelectedRows[0].Cells["密码"].Value.ToString();
+                textBox_name.Text = Personnel_List.SelectedRows[0].Cells["姓名"].Value.ToString();
+                comboBox_sex.SelectedItem = Personnel_List.SelectedRows[0].Cells["性别"].Value.ToString();
+                textBox_position.Text = Personnel_List.SelectedRows[0].Cells["职位"].Value.ToString();
+                textBox_contact.Text = Personnel_List.SelectedRows[0].Cells["联系方式"].Value.ToString();
+                textBox_wages.Text = Personnel_List.SelectedRows[0].Cells["工资"].Value.ToString();
+                textBox_password.Text = Personnel_List.SelectedRows[0].Cells["密码"].Value.ToString();
             }
             catch 
             {
@@ -67,7 +67,7 @@ namespace Supermarket
             }
         }
 
-        private void 人事列表_SelectionChanged(object sender, EventArgs e)
+        private void Personnel_List_SelectionChanged(object sender, EventArgs e)
         {
             showInfo();
         }
@@ -83,7 +83,7 @@ namespace Supermarket
 
         private void button_Quit_Click(object sender, EventArgs e)
         {
-            string statement = "update yuangong set 离职=1 where 工号=" + 人事列表.SelectedRows[0].Cells["工号"].Value.ToString();
+            string statement = "update yuangong set 离职=1 where 工号=" + Personnel_List.SelectedRows[0].Cells["工号"].Value.ToString();
             System.Diagnostics.Debug.WriteLine(statement);
             SqlCommand command = new(statement, SQL.Connection);
             command.ExecuteNonQuery();
@@ -92,7 +92,7 @@ namespace Supermarket
 
         private void button_Update_Click(object sender, EventArgs e)
         {
-            string statement = "update yuangong set 姓名=N'" + textBox_name.Text + "',性别=N'" + comboBox_sex.Text + "',职位=N'" + textBox_position.Text + "',联系方式='" + textBox_contact.Text + "',工资='" + textBox_wages.Text + "',密码='" + textBox_password.Text + "' "  + "where 工号=" + 人事列表.SelectedRows[0].Cells["工号"].Value.ToString();
+            string statement = "update yuangong set 姓名=N'" + textBox_name.Text + "',性别=N'" + comboBox_sex.Text + "',职位=N'" + textBox_position.Text + "',联系方式='" + textBox_contact.Text + "',工资='" + textBox_wages.Text + "',密码='" + textBox_password.Text + "' "  + "where 工号=" + Personnel_List.SelectedRows[0].Cells["工号"].Value.ToString();
             System.Diagnostics.Debug.WriteLine(statement);
             SqlCommand command = new(statement, SQL.Connection);
             command.ExecuteNonQuery();

@@ -74,6 +74,26 @@ namespace Supermarket
 
         private void button_Entry_Click(object sender, EventArgs e)
         {
+            if(textBox_name.TextLength == 0)
+            {
+                MessageBox.Show("请输入姓名!");
+                return;
+            }
+            //if (comboBox_sex.SelectedValue.ToString() == "")
+            //{
+            //    MessageBox.Show("请选择性别!");
+            //    return;
+            //}
+            if (textBox_password.Text == "")
+            {
+                MessageBox.Show("请输入密码!");
+                return;
+            }
+            if(textBox_password.Text != textBox_confirmPassword.Text)
+            {
+                MessageBox.Show("两次密码输入不一致!");
+                return;
+            }
             string statement = "insert into yuangong (姓名,性别,职位,联系方式,工资,入职时间,密码) values (N'" + textBox_name.Text + "',N'" + comboBox_sex.Text + "',N'" + textBox_position.Text + "','" + textBox_contact.Text + "','" + textBox_wages.Text + "','" + DateTime.Now.ToString("d") + "','" + textBox_password.Text + "')";
             System.Diagnostics.Debug.WriteLine(statement);
             SqlCommand command = new(statement, SQL.Connection);

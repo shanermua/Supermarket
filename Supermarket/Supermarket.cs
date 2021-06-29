@@ -29,16 +29,16 @@ namespace Supermarket
             SqlDataAdapter dataAdapter = new(command);
             DataSet dataSet = new();
             dataAdapter.Fill(dataSet, "huojia");
-            货架状态.DataSource = dataSet;
-            货架状态.DataMember = "huojia";
+            Shelves_Status.DataSource = dataSet;
+            Shelves_Status.DataMember = "huojia";
             command.CommandText = "select * from kucun";
             dataAdapter.Fill(dataSet, "kucun");
-            仓库状态.DataSource = dataSet;
-            仓库状态.DataMember = "kucun";
+            Warehouse_Status.DataSource = dataSet;
+            Warehouse_Status.DataMember = "kucun";
             command.CommandText = "select * from xiaoshou";
             dataAdapter.Fill(dataSet, "xiaoshou");
-            销售列表.DataSource = dataSet;
-            销售列表.DataMember = "xiaoshou";
+            Sale_Status.DataSource = dataSet;
+            Sale_Status.DataMember = "xiaoshou";
         }
 
         private void Supermarket_Load(object sender, EventArgs e)

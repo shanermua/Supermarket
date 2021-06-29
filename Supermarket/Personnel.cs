@@ -27,21 +27,12 @@ namespace Supermarket
             dataAdapter.Fill(dataSet, "yuangong");
             Personnel_List.DataSource = dataSet;
             Personnel_List.DataMember = "yuangong";
-            //for (int i = 0; i < dataSet.Tables["yuangong"].Rows.Count; i++)
-            //{
-            //    人事列表.Rows[i].Cells[8].ValueType = statement.GetType();
-            //    System.Diagnostics.Debug.WriteLine(dataSet.Tables["yuangong"].Rows[i].ItemArray[8].ToString());
-            //    if (dataSet.Tables["yuangong"].Rows[i].ItemArray[8].ToString() == "True")
-            //    {
-            //        //人事列表.Rows[i].Cells[8].ValueType = "".GetType();
-            //        人事列表.Rows[i].Cells[8].Value = "是";
-            //    }
-            //    else
-            //    {
-            //        //人事列表.Rows[i].Cells[8].ValueType = "".GetType();
-            //        人事列表.Rows[i].Cells[8].Value = "否";
-            //    }
-            //}
+            for (int i = 0; i < dataSet.Tables["yuangong"].Rows.Count; i++)
+            {
+                //Personnel_List.Rows[i].Cells[7].ValueType = statement.GetType();
+                System.Diagnostics.Debug.WriteLine(dataSet.Tables["yuangong"].Rows[i].ItemArray[7].ToString());
+                Personnel_List.Rows[i].Cells[7].Value = "*********";
+            }
         }
 
         private void Personnel_Load(object sender, EventArgs e)
@@ -59,7 +50,7 @@ namespace Supermarket
                 textBox_position.Text = Personnel_List.SelectedRows[0].Cells["职位"].Value.ToString();
                 textBox_contact.Text = Personnel_List.SelectedRows[0].Cells["联系方式"].Value.ToString();
                 textBox_wages.Text = Personnel_List.SelectedRows[0].Cells["工资"].Value.ToString();
-                textBox_password.Text = Personnel_List.SelectedRows[0].Cells["密码"].Value.ToString();
+                //textBox_password.Text = Personnel_List.SelectedRows[0].Cells["密码"].Value.ToString();
             }
             catch 
             {

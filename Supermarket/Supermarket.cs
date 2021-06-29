@@ -94,6 +94,12 @@ namespace Supermarket
             Logout.Enabled = false;
             MessageBox.Show("注销成功！");
         }
+
+        private void Personnel_Click(object sender, EventArgs e)
+        {
+            Personnel personnel = new Personnel();
+            personnel.Show();
+        }
     }
     public class SQL
     {

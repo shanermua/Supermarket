@@ -112,6 +112,11 @@ namespace Supermarket
 
         private void button_Update_Click(object sender, EventArgs e)
         {
+            if (textBox_password.Text != textBox_confirmPassword.Text)
+            {
+                MessageBox.Show("两次密码输入不一致!");
+                return;
+            }
             string statement = "update yuangong set 姓名=N'" + textBox_name.Text + "',性别=N'" + comboBox_sex.Text + "',职位=N'" + textBox_position.Text + "',联系方式='" + textBox_contact.Text + "',工资='" + textBox_wages.Text + "',密码='" + textBox_password.Text + "' "  + "where 工号=" + Personnel_List.SelectedRows[0].Cells["工号"].Value.ToString();
             System.Diagnostics.Debug.WriteLine(statement);
             SqlCommand command = new(statement, SQL.Connection);

@@ -32,10 +32,10 @@ namespace Supermarket
             this.Warehouse_Status = new System.Windows.Forms.DataGridView();
             this.Shelves_Status = new System.Windows.Forms.DataGridView();
             this.Sale_Status = new System.Windows.Forms.DataGridView();
-            this.button7 = new System.Windows.Forms.Button();
+            this.Supplier = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Shelves = new System.Windows.Forms.Button();
+            this.Warehouse = new System.Windows.Forms.Button();
             this.Login = new System.Windows.Forms.Button();
             this.Personnel = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -61,6 +61,7 @@ namespace Supermarket
             // 
             // Warehouse_Status
             // 
+            this.Warehouse_Status.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.Warehouse_Status.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Warehouse_Status.Location = new System.Drawing.Point(0, 0);
             this.Warehouse_Status.Name = "Warehouse_Status";
@@ -72,6 +73,7 @@ namespace Supermarket
             // 
             // Shelves_Status
             // 
+            this.Shelves_Status.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.Shelves_Status.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Shelves_Status.Location = new System.Drawing.Point(-4, 0);
             this.Shelves_Status.Name = "Shelves_Status";
@@ -83,6 +85,7 @@ namespace Supermarket
             // 
             // Sale_Status
             // 
+            this.Sale_Status.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.Sale_Status.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Sale_Status.Location = new System.Drawing.Point(-4, 0);
             this.Sale_Status.Name = "Sale_Status";
@@ -93,14 +96,15 @@ namespace Supermarket
             this.Sale_Status.Size = new System.Drawing.Size(757, 569);
             this.Sale_Status.TabIndex = 0;
             // 
-            // button7
+            // Supplier
             // 
-            this.button7.Location = new System.Drawing.Point(964, 277);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(94, 29);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "供应商管理";
-            this.button7.UseVisualStyleBackColor = true;
+            this.Supplier.Location = new System.Drawing.Point(964, 277);
+            this.Supplier.Name = "Supplier";
+            this.Supplier.Size = new System.Drawing.Size(94, 29);
+            this.Supplier.TabIndex = 1;
+            this.Supplier.Text = "供应商管理";
+            this.Supplier.UseVisualStyleBackColor = true;
+            this.Supplier.Click += new System.EventHandler(this.Supplier_Click);
             // 
             // button4
             // 
@@ -111,23 +115,25 @@ namespace Supermarket
             this.button4.Text = "销售管理";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // Shelves
             // 
-            this.button3.Location = new System.Drawing.Point(906, 351);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "仓库管理";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Shelves.Location = new System.Drawing.Point(906, 351);
+            this.Shelves.Name = "Shelves";
+            this.Shelves.Size = new System.Drawing.Size(94, 29);
+            this.Shelves.TabIndex = 1;
+            this.Shelves.Text = "货架管理";
+            this.Shelves.UseVisualStyleBackColor = true;
+            this.Shelves.Click += new System.EventHandler(this.Shelves_Click);
             // 
-            // button2
+            // Warehouse
             // 
-            this.button2.Location = new System.Drawing.Point(806, 351);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "货架管理";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Warehouse.Location = new System.Drawing.Point(806, 351);
+            this.Warehouse.Name = "Warehouse";
+            this.Warehouse.Size = new System.Drawing.Size(94, 29);
+            this.Warehouse.TabIndex = 1;
+            this.Warehouse.Text = "仓库管理";
+            this.Warehouse.UseVisualStyleBackColor = true;
+            this.Warehouse.Click += new System.EventHandler(this.Warehouse_Click);
             // 
             // Login
             // 
@@ -234,7 +240,7 @@ namespace Supermarket
             this.tabPage1.Controls.Add(this.Sale_Status);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(748, 565);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "销售列表";
@@ -245,7 +251,7 @@ namespace Supermarket
             this.tabPage2.Controls.Add(this.Shelves_Status);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(748, 565);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "货架状态";
@@ -256,7 +262,7 @@ namespace Supermarket
             this.tabPage3.Controls.Add(this.Warehouse_Status);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(748, 565);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "仓库状态";
@@ -266,15 +272,16 @@ namespace Supermarket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1188, 620);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.Supplier);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.Shelves);
             this.Controls.Add(this.Personnel);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Warehouse);
             this.Name = "Supermarket";
             this.Text = "超市管理系统";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Supermarket_FormClosing);
@@ -294,14 +301,14 @@ namespace Supermarket
 
         #endregion
         private System.Windows.Forms.Button Personnel;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Warehouse;
+        private System.Windows.Forms.Button Shelves;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button Login;
         private System.Windows.Forms.DataGridView Warehouse_Status;
         private System.Windows.Forms.DataGridView Shelves_Status;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button Supplier;
         private System.Windows.Forms.DataGridView Sale_Status;
         private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.TextBox PassWord;

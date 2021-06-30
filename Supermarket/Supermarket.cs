@@ -100,6 +100,24 @@ namespace Supermarket
             Personnel personnel = new Personnel();
             personnel.Show();
         }
+
+        private void Supplier_Click(object sender, EventArgs e)
+        {
+            Supplier supplier = new();
+            supplier.Show();
+        }
+
+        private void Warehouse_Click(object sender, EventArgs e)
+        {
+            Warehouse warehouse = new();
+            warehouse.Show();
+        }
+
+        private void Shelves_Click(object sender, EventArgs e)
+        {
+            Shelves shelves = new();
+            shelves.Show();
+        }
     }
     public class SQL
     {

@@ -17,7 +17,7 @@ namespace Supermarket
         {
             InitializeComponent();
         }
-        public void Initcangku()
+        public void Warehouse_Reload()
         {
             string statement = "select * from kucun";
             SqlCommand command = new(statement, SQL.Connection);
@@ -36,7 +36,7 @@ namespace Supermarket
             System.Diagnostics.Debug.WriteLine(statement);
             SqlCommand command = new(statement, SQL.Connection);
             command.ExecuteNonQuery();
-            Initcangku();
+            Warehouse_Reload();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace Supermarket
             System.Diagnostics.Debug.WriteLine(statement);
             SqlCommand command = new(statement, SQL.Connection);
             command.ExecuteNonQuery();
-            Initcangku();
+            Warehouse_Reload();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -57,17 +57,17 @@ namespace Supermarket
             System.Diagnostics.Debug.WriteLine(statement);
             SqlCommand command = new(statement, SQL.Connection);
             command.ExecuteNonQuery();
-            Initcangku();
+            Warehouse_Reload();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Initcangku();
+            Warehouse_Reload();
         }
 
         private void Warehouse_Load(object sender, EventArgs e)
         {
-            Initcangku();
+            Warehouse_Reload();
         }
     }
 }

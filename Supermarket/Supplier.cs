@@ -17,7 +17,7 @@ namespace Supermarket
         {
             InitializeComponent();
         }
-        public void Initgonghuoshsng()
+        public void Supplier_Reload()
         {
             string statement = "select * from gonghuoshang";
             SqlCommand command = new(statement, SQL.Connection);
@@ -29,7 +29,7 @@ namespace Supermarket
         }
         private void Supplier_Load(object sender, EventArgs e)
         {
-            Initgonghuoshsng();
+            Supplier_Reload();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace Supermarket
             System.Diagnostics.Debug.WriteLine(statement);
             SqlCommand command = new(statement, SQL.Connection);
             command.ExecuteNonQuery();
-            Initgonghuoshsng();
+            Supplier_Reload();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace Supermarket
             System.Diagnostics.Debug.WriteLine(statement);
             SqlCommand command = new(statement, SQL.Connection);
             command.ExecuteNonQuery();
-            Initgonghuoshsng();
+            Supplier_Reload();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -61,12 +61,12 @@ namespace Supermarket
             System.Diagnostics.Debug.WriteLine(statement);
             SqlCommand command = new(statement, SQL.Connection);
             command.ExecuteNonQuery();
-            Initgonghuoshsng();
+            Supplier_Reload();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Initgonghuoshsng();
+            Supplier_Reload();
         }
     }
 }

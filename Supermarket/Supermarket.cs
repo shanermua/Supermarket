@@ -118,6 +118,11 @@ namespace Supermarket
             Shelves shelves = new();
             shelves.Show();
         }
+
+        private void Sale_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     public class SQL
     {

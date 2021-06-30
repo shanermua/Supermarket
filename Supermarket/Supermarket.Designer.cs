@@ -33,7 +33,7 @@ namespace Supermarket
             this.Shelves_Status = new System.Windows.Forms.DataGridView();
             this.Sale_Status = new System.Windows.Forms.DataGridView();
             this.Supplier = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Sale = new System.Windows.Forms.Button();
             this.Shelves = new System.Windows.Forms.Button();
             this.Warehouse = new System.Windows.Forms.Button();
             this.Login = new System.Windows.Forms.Button();
@@ -106,14 +106,15 @@ namespace Supermarket
             this.Supplier.UseVisualStyleBackColor = true;
             this.Supplier.Click += new System.EventHandler(this.Supplier_Click);
             // 
-            // button4
+            // Sale
             // 
-            this.button4.Location = new System.Drawing.Point(1006, 351);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 29);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "销售管理";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Sale.Location = new System.Drawing.Point(1006, 351);
+            this.Sale.Name = "Sale";
+            this.Sale.Size = new System.Drawing.Size(94, 29);
+            this.Sale.TabIndex = 1;
+            this.Sale.Text = "销售管理";
+            this.Sale.UseVisualStyleBackColor = true;
+            this.Sale.Click += new System.EventHandler(this.Sale_Click);
             // 
             // Shelves
             // 
@@ -277,7 +278,7 @@ namespace Supermarket
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.Supplier);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.Sale);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.Shelves);
             this.Controls.Add(this.Personnel);
@@ -303,7 +304,7 @@ namespace Supermarket
         private System.Windows.Forms.Button Personnel;
         private System.Windows.Forms.Button Warehouse;
         private System.Windows.Forms.Button Shelves;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Sale;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button Login;
         private System.Windows.Forms.DataGridView Warehouse_Status;

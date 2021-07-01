@@ -34,7 +34,7 @@ namespace Supermarket
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string statement = "insert into gonghuoshang values(N'{0}','{1}','{2}','{3}','{4}',N'{5}')";
+            string statement = "insert into gonghuoshang values(N'{0}',N'{1}',N'{2}',N'{3}',N'{4}',N'{5}')";
             statement = string.Format(statement, textBox1.Text, textBox2.Text, textBox3.Text, textBox5.Text, textBox6.Text, textBox4.Text);
 
             System.Diagnostics.Debug.WriteLine(statement);
@@ -55,7 +55,7 @@ namespace Supermarket
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string statement = "update gonghuoshang set 供货商名=N'{0}',负责人='{1}',联系方式='{2}',邮箱='{3}',地址=N'{4}'where 供货商编号='{5}'";
+            string statement = "update gonghuoshang set 供货商名=N'{0}',负责人=N'{1}',联系方式=N'{2}',邮箱=N'{3}',地址=N'{4}'where 供货商编号='{5}'";
             statement = string.Format(statement, textBox2.Text, textBox3.Text, textBox5.Text, textBox6.Text, textBox4.Text, textBox1.Text);
 
             System.Diagnostics.Debug.WriteLine(statement);

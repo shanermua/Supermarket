@@ -17,19 +17,19 @@ namespace Supermarket
         {
             InitializeComponent();
         }
-        public void Inithuojia()
+        public void Shelves_Reload()
         {
             string statement = "select * from huojia";
             SqlCommand command = new(statement, SQL.Connection);
             SqlDataAdapter dataAdapter = new(command);
             DataSet dataSet = new();
             dataAdapter.Fill(dataSet, "huojia");
-            货架列表.DataSource = dataSet;
-            货架列表.DataMember = "huojia";
+            Selves_List.DataSource = dataSet;
+            Selves_List.DataMember = "huojia";
         }
         private void Supplier_Load(object sender, EventArgs e)
         {
-            Inithuojia();
+            Shelves_Reload();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace Supermarket
             System.Diagnostics.Debug.WriteLine(statement);
             SqlCommand command = new(statement, SQL.Connection);
             command.ExecuteNonQuery();
-            Inithuojia();
+            Shelves_Reload();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace Supermarket
             System.Diagnostics.Debug.WriteLine(statement);
             SqlCommand command = new(statement, SQL.Connection);
             command.ExecuteNonQuery();
-            Inithuojia();
+            Shelves_Reload();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -61,12 +61,12 @@ namespace Supermarket
             System.Diagnostics.Debug.WriteLine(statement);
             SqlCommand command = new(statement, SQL.Connection);
             command.ExecuteNonQuery();
-            Inithuojia();
+            Shelves_Reload();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Inithuojia();
+            Shelves_Reload();
         }
     }
 }

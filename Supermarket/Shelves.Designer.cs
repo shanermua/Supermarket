@@ -29,7 +29,7 @@ namespace Supermarket
         /// </summary>
         private void InitializeComponent()
         {
-            this.货架列表 = new System.Windows.Forms.DataGridView();
+            this.Selves_List = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,18 +44,18 @@ namespace Supermarket
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.货架列表)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Selves_List)).BeginInit();
             this.SuspendLayout();
             // 
-            // 货架列表
+            // Selves_List
             // 
-            this.货架列表.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.货架列表.Location = new System.Drawing.Point(27, 12);
-            this.货架列表.Name = "货架列表";
-            this.货架列表.RowHeadersWidth = 51;
-            this.货架列表.RowTemplate.Height = 29;
-            this.货架列表.Size = new System.Drawing.Size(739, 208);
-            this.货架列表.TabIndex = 0;
+            this.Selves_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Selves_List.Location = new System.Drawing.Point(27, 12);
+            this.Selves_List.Name = "Selves_List";
+            this.Selves_List.RowHeadersWidth = 51;
+            this.Selves_List.RowTemplate.Height = 29;
+            this.Selves_List.Size = new System.Drawing.Size(739, 208);
+            this.Selves_List.TabIndex = 0;
             // 
             // label1
             // 
@@ -177,7 +177,7 @@ namespace Supermarket
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Huojia
+            // Shelves
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -196,10 +196,10 @@ namespace Supermarket
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.货架列表);
-            this.Name = "Huojia";
+            this.Controls.Add(this.Selves_List);
+            this.Name = "Shelves";
             this.Text = "Huojia";
-            ((System.ComponentModel.ISupportInitialize)(this.货架列表)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Selves_List)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,7 +207,7 @@ namespace Supermarket
 
         #endregion
 
-        private System.Windows.Forms.DataGridView 货架列表;
+        private System.Windows.Forms.DataGridView Selves_List;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;

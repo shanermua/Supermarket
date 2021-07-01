@@ -121,7 +121,8 @@ namespace Supermarket
 
         private void Sale_Click(object sender, EventArgs e)
         {
-
+            Sale sale = new("202121");
+            sale.Show();
         }
     }
     public class SQL

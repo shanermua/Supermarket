@@ -24,8 +24,8 @@ namespace Supermarket
             SqlDataAdapter dataAdapter = new(command);
             DataSet dataSet = new();
             dataAdapter.Fill(dataSet, "kucun");
-            仓库列表.DataSource = dataSet;
-            仓库列表.DataMember = "kucun";
+            Warehouse_List.DataSource = dataSet;
+            Warehouse_List.DataMember = "kucun";
         }
 
         private void button1_Click(object sender, EventArgs e)

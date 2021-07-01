@@ -17,6 +17,7 @@ namespace Supermarket
     {
         public Sale(string id)
         {
+            //Static s = new();
             Static.id = id;
             InitializeComponent();
         }
@@ -71,9 +72,10 @@ namespace Supermarket
         {
             if(Static.isLegal)
             {
-                textBox6.Text = int.Parse(textBox5.Text) + int.Parse(textBox6.Text).ToString();
-                Static.statement.Add("insert into xiaoshou (商品编号,批次,数量,销售员,销售时间) values (" + textBox1.Text + "," + textBox2.Text + "," + textBox3.Text + "," + Static.id.ToString() + "," + DateTime.Now.ToString("d"));
-                Static.statement.Add("update huojia set 数量=数量-" + textBox3.Text + "where 商品编号=" + textBox1.Text + ",批次=" + textBox2.Text);
+                textBox6.Text = (int.Parse(textBox5.Text) + int.Parse(textBox6.Text)).ToString();
+                Static.statement = new();
+                Static.statement.Add("insert into xiaoshou (商品编号,批次,数量,销售员,销售时间) values (" + textBox1.Text + "," + textBox2.Text + "," + textBox3.Text + "," + Static.id.ToString() + ",\'" + DateTime.Now.ToString("yyyy-MM-dd H:mm:ss") + "\')");
+                Static.statement.Add("update huojia set 数量=数量-" + textBox3.Text + "where 商品编号=" + textBox1.Text + " and 批次=" + textBox2.Text);
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -94,8 +96,17 @@ namespace Supermarket
             //    SqlCommand command = new(Static.statement., SQL.Connection);
             //    command.ExecuteNonQuery();
             //}
+            if(int.Parse(textBox7.Text) >= int.Parse(textBox6.Text))
+            {
+                textBox8.Text = (int.Parse(textBox7.Text) - int.Parse(textBox6.Text)).ToString();
+            }
+            else
+            {
+                MessageBox.Show("金额不足");
+            }
             foreach(string i in Static.statement)
             {
+                System.Diagnostics.Debug.WriteLine(i);
                 SqlCommand command = new(i, SQL.Connection);
                 command.ExecuteNonQuery();
             }

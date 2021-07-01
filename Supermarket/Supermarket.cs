@@ -59,13 +59,18 @@ namespace Supermarket
 
         private void Login_Click(object sender, EventArgs e)
         {
-            string statement = "select 密码 from yuangong where 工号=" + ID.Text;
+            string statement = "select 密码,离职 from yuangong where 工号=" + ID.Text;
             SqlCommand command = new(statement, SQL.Connection);
             SqlDataAdapter dataAdapter = new(command);
             DataSet dataSet = new();
             try
             {
                 dataAdapter.Fill(dataSet, "password");
+                if(dataSet.Tables[0].Rows[0].ItemArray[1].ToString() == "True")
+                {
+                    MessageBox.Show("你已离职！");
+                    return;
+                }
                 if (PassWord.Text == dataSet.Tables[0].Rows[0].ItemArray[0].ToString())
                 {
                     MessageBox.Show("登录成功！");

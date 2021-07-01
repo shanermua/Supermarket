@@ -68,5 +68,10 @@ namespace Supermarket
         {
             Shelves_Reload();
         }
+
+        private void Shelves_Load(object sender, EventArgs e)
+        {
+            Shelves_Reload();
+        }
     }
 }

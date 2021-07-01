@@ -98,6 +98,7 @@ namespace Supermarket
             // 
             // Supplier
             // 
+            this.Supplier.Enabled = false;
             this.Supplier.Location = new System.Drawing.Point(964, 277);
             this.Supplier.Name = "Supplier";
             this.Supplier.Size = new System.Drawing.Size(94, 29);
@@ -108,6 +109,7 @@ namespace Supermarket
             // 
             // Sale
             // 
+            this.Sale.Enabled = false;
             this.Sale.Location = new System.Drawing.Point(1006, 351);
             this.Sale.Name = "Sale";
             this.Sale.Size = new System.Drawing.Size(94, 29);
@@ -118,7 +120,8 @@ namespace Supermarket
             // 
             // Shelves
             // 
-            this.Shelves.Location = new System.Drawing.Point(906, 351);
+            this.Shelves.Enabled = false;
+            this.Shelves.Location = new System.Drawing.Point(906, 352);
             this.Shelves.Name = "Shelves";
             this.Shelves.Size = new System.Drawing.Size(94, 29);
             this.Shelves.TabIndex = 1;
@@ -128,6 +131,7 @@ namespace Supermarket
             // 
             // Warehouse
             // 
+            this.Warehouse.Enabled = false;
             this.Warehouse.Location = new System.Drawing.Point(806, 351);
             this.Warehouse.Name = "Warehouse";
             this.Warehouse.Size = new System.Drawing.Size(94, 29);
@@ -148,6 +152,7 @@ namespace Supermarket
             // 
             // Personnel
             // 
+            this.Personnel.Enabled = false;
             this.Personnel.Location = new System.Drawing.Point(864, 277);
             this.Personnel.Name = "Personnel";
             this.Personnel.Size = new System.Drawing.Size(94, 29);

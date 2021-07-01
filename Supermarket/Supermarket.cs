@@ -74,6 +74,31 @@ namespace Supermarket
                     PassWord.Enabled = false;
                     Login.Enabled = false;
                     Logout.Enabled = true;
+                    command.CommandText = "select 职位 from yuangong where 工号=" + ID.Text;
+                    dataAdapter = new(command);
+                    dataAdapter.Fill(dataSet, "position");
+                    switch(dataSet.Tables["position"].Rows[0].ItemArray[0].ToString())
+                    {
+                        case "店长":
+                            Personnel.Enabled = true;
+                            Supplier.Enabled = true;
+                            Warehouse.Enabled = true;
+                            Shelves.Enabled = true;
+                            Sale.Enabled = true;
+                            break;
+                        case "进货员":
+                            Warehouse.Enabled = true;
+                            break;
+                        case "上架员":
+                            Shelves.Enabled = true;
+                            break;
+                        case "销售员":
+                            Sale.Enabled = true;
+                            break;
+                        default:
+                            break;
+
+                    }
                 }
                 else
                 {
@@ -88,6 +113,11 @@ namespace Supermarket
 
         private void Logout_Click(object sender, EventArgs e)
         {
+            Personnel.Enabled = false;
+            Supplier.Enabled = false;
+            Warehouse.Enabled = false;
+            Shelves.Enabled = false;
+            Sale.Enabled = false;
             ID.Enabled = true;
             PassWord.Enabled = true;
             Login.Enabled = true;
